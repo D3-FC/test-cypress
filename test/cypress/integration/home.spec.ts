@@ -6,10 +6,18 @@
 // This test will pass when run against a clean Quasar project
 describe('Landing', () => {
   beforeEach(() => {
+    cy.refreshDatabase()
+    cy.seed([
+      'AddTestingUser',
+      'AddTestingUser2'
+    ])
     cy.visit('/');
+
   });
-  it('.should() - assert that <title> is correct', () => {
-    cy.title().should('include', 'Quasar');
+  it('should be able to login', () => {
+
+//    cy.refreshDatabase()
+
   });
 });
 
